@@ -20,21 +20,21 @@ document.querySelector("#pause").addEventListener("click", function() {
 document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow Down Video");
 	video.playbackRate *= 0.95;
-	console.log(video.playbackRates);
+	console.log("New speed is ",video.playbackRate);
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
 	console.log("Speed Up Video");
 	video.playbackRate /= 0.95;
-	console.log(video.playbackRates);
+	console.log("New speed is ",video.playbackRate);
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
-	console.log("Skip Ahead");
+	console.log("Original location before skipping",video.currentTime);
 	video.currentTime += 15;
 	if (video.currentTime >= video.duration)
 		video.currentTime = 0;
-	console.log(video.currentTime);
+	console.log("New location ",video.currentTime);
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
